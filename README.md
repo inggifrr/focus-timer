@@ -15,5 +15,6 @@ Aplikasi focus timer sederhana berbasis web untuk membantu meningkatkan fokus da
 ## Demo
 https://inggifrr.github.io/focus-timer/
 
-## Pembuat
-- Inggi
+## Author
+- Kelompok 2 TI25C
+
