@@ -1,0 +1,231 @@
+@font-face {
+  font-family: "VCR OSD Mono";
+  src: url("assets/fonts/VT323-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --red-main: #B20B13;
+  --red-button: #B41A1A;
+  --cream: #FDECDC;
+  --brown: #6E4644;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "VCR OSD Mono", monospace;
+}
+
+body {
+  margin: 0;
+  background: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+}
+
+.app {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 3 / 4.2;
+  background: var(--red-main);
+  padding: 10px;
+  font-size: 35px;
+}
+
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--cream);
+  font-weight: bold;
+  padding: 8px 12px;
+}
+
+.window-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.btn {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: 2px solid var(--cream);
+  cursor: pointer;
+}
+
+.btn-minimize {
+  border: none;
+  width: 40px;
+  height: 40px;
+  background: url("assets/picture/minimixxe button.png") center / contain no-repeat;
+}
+
+.btn-close {
+  border: none;
+  width: 40px;
+  height: 40px;
+  background: url("assets/picture/close button.png") center / contain no-repeat;
+}
+
+.content {
+  background: var(--cream);
+  height: calc(100% - 48px);
+  padding: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.btn-back {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: url("assets/picture/back button.png") center no-repeat;
+  background-size: 60%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.clock img {
+  width: 180px;
+  max-width: 60vw;
+}
+
+.time {
+  font-size: 48px;
+  letter-spacing: 4px;
+  color: var(--brown);
+}
+
+.menu-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-start {
+  width: 110px;
+  height: 45px;
+  background: var(--red-button);
+  border: none;
+  cursor: pointer;
+  color: var(--cream);
+  font-size: 38px;
+  border-radius: 2px;
+}
+
+.btn-menu {
+  width: 110px;
+  height: 45px;
+  background: var(--red-button);
+  border: none;
+  color: var(--cream);
+  font-size: 38px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.action-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn-snooze {
+  width: 110px;
+  height: 45px;
+  background: var(--red-button);
+  border: none;
+  cursor: pointer;
+  color: var(--cream);
+  font-size: 38px;
+  border-radius: 2px;
+}
+
+.btn-closed {
+  width: 110px;
+  height: 45px;
+  background: var(--red-button);
+  border: none;
+  color: var(--cream);
+  font-size: 38px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.team-header {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: var(--brown);
+}
+
+.team-title {
+  font-size: 48px;
+  letter-spacing: 4px;
+}
+
+.team-sub {
+  font-size: 32px;
+  margin-top: 8px;
+}
+
+.team-class {
+  font-size: 26px;
+  margin-top: 6px;
+}
+
+.team-members {
+  font-size: 24px;
+  margin-top: 12px;
+}
+
+.btn-finish {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 110px;
+  height: 45px;
+  background: var(--red-button);
+  border: none;
+  color: var(--cream);
+  font-size: 32px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+
+
+@media (max-width: 480px) {
+  .time {
+    font-size: 40px;
+  }
+
+  .btn-start {
+    width: 132px;
+    height: 48px;
+  }
+}
